@@ -1,0 +1,262 @@
+@import'variables';
+
+@mixin media-query($break) {
+    @if $break =="small" {
+        @media (min-width: $break-xs) {
+            @content;
+        }
+    }
+
+    @else if $break =="medium" {
+        @media (min-width: $break-s) {
+            @content;
+        }
+    }
+
+    @else if $break =="large" {
+        @media (min-width: $break-m) {
+            @content;
+        }
+    }
+
+    @else if $break =="x-large" {
+        @media (min-width: $break-l) {
+            @content;
+        }
+    }
+
+    @else {
+        @error "Error: No value could be retrieved from argument $break: '#{$break}'";
+    }
+}
+
+//These media queries are for the footer section 
+@media only screen and (min-width:$break-xs) {
+    .main-footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+}
+
+@media only screen and (min-width:705px) {
+
+    .fi1,
+    .fi2 {
+        width: 34%;
+    }
+
+    .fi3,
+    .fi4,
+    .fi5 {
+        width: 33%;
+    }
+
+    .main-footer {
+        justify-content: space-evenly;
+    }
+}
+
+@media only screen and (min-width:$break-l) {
+    .footer-item {
+        display: flex;
+        flex-wrap: wrap;
+        width: auto;
+    }
+}
+
+//These media queries are for the newsletter section
+@media only screen and (min-width:1000px) {
+    .sign-up-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 47px 0 43px;
+    }
+
+    .form-wrapper {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .user_name,
+    .user-email {
+        display: flex;
+        justify-content: space-between;
+
+
+    }
+}
+
+// These media queries are for the client logos
+@media only screen and (min-width:1259px) {
+    .logo-list {
+        height: auto;
+        width: 100%;
+        padding: 0;
+    }
+}
+
+//media queries that can hide the client logos. not working at the moment.
+@media only screen and (max-width:767px) {
+
+    .client-logo-area,
+    #bar-heading-link {
+        display: none;
+    }
+
+    .license {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+//This media querie hides the third latest news post when u resize the windows to smaller.
+@media only screen and (max-width:1200px) {
+    .ni3 {
+        display: none !important;
+    }
+
+    .ni1,
+    .ni2 {
+        width: calc(100/2);
+    }
+}
+
+//This media querie make it so that u can read all of the latest news in a single column when the window gets to a small size. 
+@media only screen and (max-width:767px) {
+    .inside-news-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .news-image {
+        max-width: 100%;
+    }
+
+    .ni3 {
+        display: unset !important;
+    }
+
+
+}
+
+//media query which places the first three services as full width and places the remaining four into two rows of two
+@media only screen and (min-width:767px) {
+    .si-1 {
+        grid-area: service-1;
+    }
+
+    .si-2 {
+        grid-area: service-2;
+    }
+
+    .si-3 {
+        grid-area: service-3;
+    }
+
+    .si-4 {
+        grid-area: service-4;
+    }
+
+    .si-5 {
+        grid-area: service-5;
+    }
+
+    .si-6 {
+        grid-area: service-6;
+    }
+
+    .si-7 {
+        grid-area: service-7;
+    }
+
+    .auto-grid {
+        display: grid;
+        grid-template-areas:
+            "service-1 service-1"
+            "service-2 service-2"
+            "service-3 service-3"
+            "service-4 service-5"
+            "service-6 service-7";
+    }
+
+}
+
+//media query which flexes the services into a row of three followed by a row of four
+@media only screen and (min-width:992px) {
+
+    .auto-grid {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .si-1,
+    .si-2,
+    .si-3 {
+        flex: 1 1 333px;
+
+    }
+
+    .si-4,
+    .si-5,
+    .si-6,
+    .si-7 {
+        flex: 1 1 250px;
+    }
+
+    .col {
+        width: 50%;
+        float: left;
+        padding-left: 15px;
+        padding-right: 15px;
+
+    }
+
+
+}
+
+//media query to reduce the banner content size, align center and remove the margin from the container
+@media only screen and (max-width:993px) {
+    .banner-content {
+        margin-left: 0 !important;
+        align-items: center;
+        text-align: center;
+    }
+
+    .banner-content .banner-headline {
+        font-size: 2.5rem;
+        line-height: 3rem;
+    }
+
+    .banner-content .banner-text {
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+
+    }
+
+    .navigation {
+        display: none;
+    }
+
+    .actions-container {
+        display: none;
+    }
+
+@media (min-width: 1260px)
+footer .footer-company-info {
+    width: 400px;
+}
+footer .footer-company-info {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+}
+*, :after, :before {
+    box-sizing: border-box;
+
+
+}

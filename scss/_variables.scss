@@ -1,0 +1,65 @@
+//  Variables
+// ======================================
+
+// Background Colors
+$bk-white: #ffffff;
+$bk-white-two: #FFFFFF80;
+$bk-grey: #DDDDDD;
+$bk-green: #2ECC71;
+$bk-green-two: #00B67B;
+$bk-grey-three: #999AA2;
+$bk-blue: #4387F6;
+$bk-blue-two: #4183D7;
+$bk-pink: #F62459;
+$bk-blue-three: #67809F;
+$bk-purple: #926FB1;
+$bk-rust: #D64541;
+$bk-rust-two: #CE4125;
+$bk-grey-four: #333645;
+$bk-grey-five: #272936;
+$light-grey:#ddd;
+$bk-black: #000000;
+$bk-silver: #e5e5e5;
+$bk-silver-two: #ccc;
+$bk-dark-grey: #666;
+$search-border: #5bc0de;
+
+// Additional Text Colors
+$tx-yellow: #FFA500;
+$tx-grey: #A3A8AC;
+$tx-rust: #D24D57;
+$tx-grey: #666666;
+$tx-grey-two: #555555;
+
+
+// Fonts
+$font-stack-primary: Verdana, Geneva, Tahoma, sans-serif;
+$font-stack-secondary: Poppins, sans-serif;
+
+// Breakpoints
+$break-xs: 576px;
+$break-s: 767px;
+$break-m: 991px;
+$break-l: 1259px;
+
+$colors: (
+    a: $bk-blue-three,
+    b: $bk-blue-two,
+    c: $bk-green,
+    d: $bk-rust,
+    e: $bk-purple,
+    f: $bk-pink,
+    g: $bk-rust-two
+);
+
+$button-colors: (
+    a: #2a63ac,
+    b: #74747a,
+    c: #74747a,
+    d: #23252f,
+    e: #415063,
+    f: #121318,
+    g: #166af4,
+    h: #009b69,
+    i: #22242e
+);

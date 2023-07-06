@@ -1,0 +1,120 @@
+.button {
+	color: $bk-white;
+	text-align: center;
+	padding: .625em 1.25em;
+	border-radius: .35em;
+	border:none;
+    &:hover{
+    text-decoration: none;
+    }
+}
+
+#signup-button{
+    color:  #fff;
+	text-align: center;
+	padding: .625em 1.25em;
+	background: #333645;
+	border-radius: .35em;	
+	text-transform: uppercase;
+	text-decoration: none ;
+	
+}
+
+.nb1{
+    color:  #fff;
+	text-align: center;
+	padding: .625em 1.25em;
+	background: $bk-green;
+	border-radius: .35em;
+	border: $bk-green;
+}
+
+.nb2, .nb3{
+    color:  #fff;
+	text-align: center;
+	padding: .625em 1.25em;
+	background: $bk-purple;
+	border-radius: .35em;
+	border: $bk-green;
+}
+
+.welcome-button{
+	color: #fff;
+    background-color: #272936;
+	border-radius: .35em;
+	text-align: center;
+	padding: .625em 1.25em;
+	margin-bottom:1rem;
+	text-transform: uppercase;
+	&:hover {
+		background-color: darken(#272936, 10%);
+		color:white;
+	}
+}
+
+.google-button{
+	color: #fff;
+    background-color: $bk-blue;
+	border-radius: .35em;
+	text-align: center;
+	padding: .625em 1.25em;
+	margin-top: 20px;
+
+	&:hover {
+		background-color: darken($bk-blue, 10%);
+		color:white;
+	}
+}
+
+.tpilot-button{
+	color: #fff;
+    background-color: $bk-green-two;
+	border-radius: .35em;
+	text-align: center;
+	padding: .625em 1.25em;
+	margin-top: 20px;
+
+	&:hover {
+		background-color: darken($bk-green-two, 10%);
+		color:white;
+	}
+}
+
+.centre-button{
+    display:grid;
+    margin:left;
+    margin-bottom:5rem;
+    max-width: 40%; 
+}
+
+.banner-button{
+	color: #fff;
+	line-height: 50px;
+	background: $bk-rust;
+	border-radius: .35em;
+	text-align: center;
+	padding: 5px 20px;
+	margin-top: 1.938rem;
+	margin-bottom:1rem;
+	font-size: 1.25rem;
+	border: 1px solid transparent;
+		&:hover{
+			color:white;
+		}
+}
+.header-button{
+	height: auto;
+    padding: 5px 20px;
+    font-size: 1.25rem;
+    line-height: 50px;
+    border-radius: 3px;
+	text-transform: uppercase;
+	color:#fff;
+	border:none;
+}
+.support-button{
+	background-color: $bk-blue-two;
+}
+.contact-button{
+	background-color: $bk-grey-three;
+}

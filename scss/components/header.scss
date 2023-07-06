@@ -1,0 +1,237 @@
+@import 'media-queries';
+// Got help by going too W3schools and looking at all the information about media queries 
+.header {
+    padding-top: 20px;
+    padding-bottom: 18px;
+    height: 170px;
+    background-color: white;
+
+    @include media-query(medium) {
+        height: 110px;
+    }
+
+    &-logo {
+        margin-right: auto;
+        align-self: center;
+    }
+
+    &-phone {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+        margin-left: 20px;
+        height: 40px;
+        width: 35px;
+
+        &:hover {
+            border-bottom: 1px solid $bk-grey-four;
+            height: 41px;
+        }
+
+        &>i {
+            color: $bk-grey-four;
+            font-size: 25px;
+        }
+
+        @include media-query(medium) {
+            display: none;
+        }
+    }
+
+    &-contact-btn,
+    &-support-btn {
+        display: none;
+        height: 57px;
+        width: 130px;
+        margin-top: 7px;
+        margin-left: 18px;
+        padding: 0;
+        cursor: pointer;
+        border: none;
+        border-radius: 3px;
+        color: white;
+        text-transform: uppercase;
+
+
+        @include media-query (large) {
+            display: block;
+        }
+
+        & > i {
+            color: white;
+            font-size: 20px;
+            margin-right: 5px;
+            transform: translateY(2px);
+        }
+    }
+
+    &-contact-btn {
+        background-color: $bk-grey-three;
+
+        &:hover {
+            background-color: darken($bk-grey-three, 10%);
+        }
+    }
+
+    &-support-btn {
+        background-color: $bk-blue-two;
+
+        &:hover {
+            background-color: darken($bk-blue-two, 10%);
+        }
+    }
+}
+
+.top-row {
+    margin-bottom: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    &>a>img {
+        max-width: 100%;
+
+        @include media-query(medium) {
+            max-height: 60.2px;
+        }
+
+        @include media-query(large) {
+            max-height: 65px;
+        }
+
+    }
+}
+
+.bottom-row {
+    position: relative;
+
+    &>a {
+        color: $bk-grey-four;
+
+        @include media-query(medium) {
+            display: none;
+        }
+
+        &>i {
+            position: absolute;
+            right: 0;
+            transform: translate(-10px, 13px);
+            font-size: 20px;
+        }
+    }
+}
+
+.header-search {
+    display: none;
+    width: 198px;
+    height: 56px;
+    padding: 5px 15px;
+    margin-top: 7px;
+    border: 1px solid $bk-silver-two;
+    box-shadow: inset 0 1px 1px rgba($color: $bk-black, $alpha: 0.08);
+    font-size: 14px;
+
+    &:focus {
+        outline: 0;
+        border-color: $search-border;
+        box-shadow: 0 0 8px rgba($color: $search-border, $alpha: 0.6);
+    }
+
+    @include media-query(medium) {
+        display: block;
+        margin-left: 50px;
+    }
+
+    @include media-query(large) {
+        display: none;
+    }
+
+    @include media-query(x-large) {
+        display: block;
+        margin-left: 25px;
+        width: 275px;
+    }
+
+    &-btn {
+        display: none;
+        height: 56px;
+        width: 63px;
+        margin-top: 7px;
+        border: none;
+        background-color: $bk-grey-three;
+        border-bottom-right-radius: 3px;
+        border-top-right-radius: 3px;
+        padding-left: 5px;
+        cursor: pointer;
+
+        @include media-query(medium) {
+            display: block;
+        }
+
+        @include media-query(large) {
+            border-radius: 3px;
+            margin-left: 20px;
+        }
+
+        @include media-query(x-large) {
+            margin-left: 0;
+            border-radius: 0;
+            border-bottom-right-radius: 3px;
+            border-top-right-radius: 3px;
+        }
+
+        &:hover {
+            background-color: darken($bk-grey-three, 10%);
+        }
+
+        & > i {
+            color: white;
+            font-size: 23px;
+        }
+    }
+}
+
+.mobile-search {
+    width: 100%;
+    height: 53px;
+    background-color: $bk-silver;
+    padding: 5px 40px 5px 15px;
+    border: 2px solid $bk-silver-two;
+    color: $bk-dark-grey;
+    box-shadow: inset 0 1px 1px rgba($color: $bk-black, $alpha: 0.08);
+    font-size: 14px;
+    line-height: 1.42857143;
+
+    &:focus {
+        outline: 0;
+    }
+
+    @include media-query(medium) {
+        display: none;
+    }
+
+}
+
+.hamburger-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 56px;
+    width:63px;
+    background-color: $bk-grey-four;
+    border:none;
+    cursor: pointer;
+    border-radius: 3px;
+    margin-top: 7px;
+    margin-left: 20px;
+    margin-bottom: 15px;
+
+    &:hover{
+        background-color: darken($bk-grey-four, 10%);
+    }
+
+    & > a > i{
+        color: white;
+    }
+}

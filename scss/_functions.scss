@@ -1,0 +1,110 @@
+@import 'variables';
+
+@each $name,
+$color in $colors {
+    $i: index($colors, $name $color);
+
+    .item-#{$i} {
+        a {
+            background-color: $color;
+        }
+
+        &:hover {
+            background-color: $color;
+            color: #fff;
+
+            h2 {
+                color: #fff;
+            }
+
+            a {
+                color: $color;
+                background-color: #fff;
+            }
+
+            i {
+                color: $color;
+                background-color: #fff;
+            }
+        }
+    }
+
+    .nav-item-#{$i} {
+        i {
+            color: $color;
+        }
+
+        &:hover {
+            background-color: $bk-white;
+            text-decoration: none;
+
+            i {
+                color: #fff;
+            }
+        }
+    }
+}
+
+//This allows it so when u hover over the button, it will change colour.
+@each $name,
+$color in $colors {
+    $i: index($colors, $name $color);
+
+    .button-#{$i} {
+        background-color: $color;
+        text-decoration: none;
+
+        &:hover {
+            background-color: #fff;
+            color: $color;
+        }
+    }
+}
+
+//This allows to change the service item background color when u hover on it.
+@each $name,
+$color in $colors {
+    $i: index($colors, $name $color);
+
+    .si-#{$i} {
+
+        &:hover {
+            background-color: $color;
+
+            .button-#{$i} {
+                background-color: white;
+                color: $color;
+
+            }
+            .icon-#{$i} {
+                color: $color;
+                background-color: $bk-white;
+
+        }
+    }
+}
+}
+//This allows to set the colours for all of the icons
+@each $name,
+$color in $colors {
+    $i: index($colors, $name $color);
+
+    .icon-#{$i} {
+        background-color: $color;
+
+        &:hover {
+            background-color: white;
+            color: $color;
+        }
+    }
+}
+
+@each $name,
+$color in $colors {
+    $i: index($colors, $name $color);
+
+    .nav-item-#{$i} {
+        color: $color;
+    }
+}
+
