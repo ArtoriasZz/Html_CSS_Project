@@ -4,19 +4,28 @@
   padding: 47px 0 43px; }
 
 .logo-list {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 0 100px; }
+    display: flex;
+    flex-direction: row;
+    row-gap: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    overflow: hidden;
+    
+}
 
 .client-item {
-  padding: 0px 20px; }
-
+ margin-right: 50px;
+  margin-left: 50px;
+  animation-name: client-item;
+  animation-duration: 25s;
+  animation-iteration-count: infinite;
+}
+.client-item h3 {
+  line-height: 1.1;
+}
 .client-item img {
-  -webkit-filter: grayscale(1);
   filter: grayscale(1);
-  width: 100%;
-  height: auto; }
-  .client-item img:hover {
-    -webkit-filter: grayscale(0);
-    filter: none; }
+}
+.client-item img:hover {
+  filter: grayscale(0);
+}
